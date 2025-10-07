@@ -127,11 +127,24 @@ footer p {
     /*border: 2px solid red;*/
 }
 
-.column {
-    width: 100%;
+.row.cv {
+    background-color: #FDFDF9;
+    /*border: solid red 1px;*/
 }
 
-.left {
+.column {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.column.cv {
+    padding: 5%;
+    width: 100%;
+    border: solid black 1px;
+}
+
+
+.left-index {
     padding: 5%;
 }
 
@@ -165,16 +178,15 @@ ul.topnav li.right {float: right;}
 
     .column {
         float: right;
-        box-sizing: border-box;
     }
 
-    .left {
+    .left-index {
         width: 45%;
         /*border: 1px solid black;*/
         padding: 1% 5% 1% 0%;
     }
 
-    .right{
+    .right-index {
         width: 40%;
         min-width: 400px;
         /*border: 1px solid black;*/
