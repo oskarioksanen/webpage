@@ -13,7 +13,49 @@ html, body {
     padding: 0;
 }
 
-.header h1 {
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5191a5;
+}
+
+li {
+    float: left;
+    width: 120px;
+}
+
+span.right {
+    float: right;
+}
+
+li a {
+    display: block;
+    font-size: 18px;
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #FFEDDF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #111111;
+}
+
+a.active {
+    background-color: #0C637E;
+}
+
+header {
+    height: 5%;
+}
+
+header h1 {
     font-size: 42px;
     font-family: "SUSE Mono", sans-serif;
     font-optical-sizing: auto;
@@ -25,8 +67,9 @@ html, body {
     margin: 0px;
 }
 
-.content {
+section {
     width: 80%;
+    height: 85%;
     margin: auto;
     font-size: 18px;
     font-family: "Roboto Mono", monospace;
@@ -40,10 +83,11 @@ html, body {
     color: #FFEDDF;
 }
 
-.content img {
-    width: 95%;
+/* TODO: find out why rounding doesn't work*/
+section img {
+    width: 400px;
     border-radius: 10%;
-    padding: 20px 0px 20px 0px;
+    padding: 40px 0px 20px 0px;
     display: block;
     margin: auto;
 }
@@ -55,41 +99,17 @@ html, body {
     padding: 15px;
 }
 
-.row {
-    width: 100%;
-}
-
-.column {
-    float: right;
-    box-sizing: border-box;
-}
-
-.left {
-    width: 60%;
-    padding: 15px;
-}
-
-.right{
-    width: 40%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .link {
     color: #FFEDDF;
 }
 
-.footer {
+footer {
     background-color: #5191a5;
+    height: 5%;
     margin-top: 40px;
 }
 
-.footer p {
+footer p {
     color: #FFEDDF;
     text-align: center;
     padding: 10px;
@@ -101,14 +121,70 @@ html, body {
     font-style: normal;
 }
 
+.row {
+    width: 100%;
+    height: 99%;
+    /*border: 2px solid red;*/
+}
+
+.column {
+    width: 100%;
+}
+
+.left {
+    padding: 5%;
+}
+
+ul.topnav li.right {float: right;}
+
+@media only screen and (max-width: 600px) {
+    ul li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    span.right {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
 @media only screen and (min-width: 1025px) {
-    .content {
+    section {
         width: 80%;
     }
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+@media screen and (min-width: 1200px) {
+
+    section img {
+        padding-top: 100px;
+    }
+
+    .column {
+        float: right;
+        box-sizing: border-box;
+    }
+
+    .left {
+        width: 45%;
+        /*border: 1px solid black;*/
+        padding: 1% 5% 1% 0%;
+    }
+
+    .right{
+        width: 40%;
+        min-width: 400px;
+        /*border: 1px solid black;*/
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
 }
