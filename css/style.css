@@ -93,11 +93,17 @@ section {
     color: #FFEDDF;
 }
 
-/* TODO: find out why rounding doesn't work*/
-section img {
+img.index {
     width: 400px;
     border-radius: 10%;
     padding: 40px 0px 20px 0px;
+    display: block;
+    margin: auto;
+}
+
+.projects.img {
+    width: 300px;
+    border-radius: 10%;
     display: block;
     margin: auto;
 }
@@ -115,9 +121,11 @@ section img {
 
 footer {
     background-color: #5191a5;
+    width: 100%;
     height: 5%;
     margin-top: 40px;
     border: black solid 2px;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -149,17 +157,68 @@ footer p {
     margin: auto;
     height: 100%;
     box-sizing: border-box;
+    border: solid black 5px;
 }
 
 .column.cv {
     padding: 5%;
-    width: 100%;
-    box-sizing: border-box;
-    border: solid black 1px;
+}
+
+.column.projects {
+    padding: 5%;
+    text-align: center;
 }
 
 .left-index {
     padding: 5%;
+}
+
+.contact-box {
+    background-color: #FDFDF9;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 20%;
+    align-items: center;
+}
+
+.contact-info {
+    margin: auto;
+    padding: 25% 0% 0% 0%;
+    width: 80%;
+}
+
+.contact-row {
+    padding: 1% 0% 0% 0%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+
+.contact-info p {
+    padding: 0% 0% 0% 10%;
+    width: 80%;
+}
+
+.contact-info a {
+    width: 10%;
+    font-size: 24px;
+    color: #111111;
+    background-color: #FDFDF9;
+    text-decoration: none;
+}
+
+.icon {
+    color: #111111;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.contact-info a:hover {
+    background-color: #fdfdf94d;
+    color: #00bfff;
+    transform: translateY(-3px);
 }
 
 nav ul.topnav li.right {float: right;}
@@ -182,19 +241,46 @@ nav ul.topnav li.right {float: right;}
     section {
         width: 90%;
         height: 75%;
-        background-color: black;
+    }
+
+    .column.projects.top {
+        width: 100%;
+        height: 50%;
+        padding: 0%;
+    }
+
+    .column.projects.sub {
+        width: 50%;
+        padding: 2%;
+        float: left;
+    }
+
+    .column.projects.bottom {
+        width: 50%;
+        height: 50%;
+        padding: 2%;
+        float: left;
+    }
+
+    .row.projects:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
 @media screen and (min-width: 1200px) {
 
-    section img {
+    img.index {
         padding-top: 100px;
+    }
+
+    .projects.img {
+        width: 90%;
     }
 
     .column {
         float: right;
-        margin: auto;
         height: 100%;
     }
 
@@ -212,34 +298,47 @@ nav ul.topnav li.right {float: right;}
         /*border: 1px solid black;*/
     }
 
-    /* Clear floats after the columns*/ 
     .row:after {
-    content: "";
-    display: table;
-    clear: both;
+        content: "";
+        display: table;
+        clear: both;
     }
 
     .column.cv {
+        width: 50%;
         float: left;
-        margin: auto;
-        padding: 5%;
-        box-sizing: border-box;
     }
 
-    .column.cv.left {
-        width: 50%;
-        /*border: 1px solid black;*/
-    }
-
-    .column.cv.right {
-        width: 50%;
-        /*border: 1px solid black;*/
+    .column.cv.work {
+        width: 100%;
     }
 
     .row.cv:after {
-    content: "";
-    display: table;
-    clear: both;
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column.projects.top {
+        width: 66.6%;
+        padding: 0%;
+        float: left;
+    }
+
+    .column.projects.sub {
+        width: 50%;
+        padding: 2%;
+    }
+
+    .column.projects.bottom {
+        width: 33.3%;
+        padding: 2%;
+    }
+
+    .row.projects:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
 }
