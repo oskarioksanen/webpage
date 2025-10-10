@@ -161,7 +161,21 @@ footer p {
 }
 
 .column.cv {
-    padding: 5%;
+    padding: 4% 8% 8% 4%;
+}
+
+.column.cv h3 {
+    text-align: center;
+    padding-bottom: 60px;
+    margin: 0px;
+}
+
+.column.cv ul li {
+    padding-bottom: 15px;
+}
+
+.column.cv ul.cv.sublist li {
+    padding-top: 10px;
 }
 
 .column.projects {
