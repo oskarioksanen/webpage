@@ -183,6 +183,12 @@ footer p {
     text-align: center;
 }
 
+.projects.img {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
 .left-index {
     padding: 5%;
 }
