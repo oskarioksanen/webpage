@@ -96,9 +96,8 @@ section {
 img.index {
     width: 400px;
     border-radius: 10%;
-    padding: 40px 0px 20px 0px;
-    display: block;
     margin: auto;
+    display: block;
 }
 
 .projects.img {
@@ -309,8 +308,11 @@ nav ul.topnav li.right {float: right;}
 @media screen and (min-width: 1200px) {
 
     img.index {
-        padding-top: 100px;
-    }
+    width: 400px;
+    border-radius: 10%;
+    margin: 40px 40px 20px 0px;
+    display: block;
+}
 
     .projects.img {
         width: 90%;
